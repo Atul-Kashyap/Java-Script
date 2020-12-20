@@ -1,7 +1,7 @@
 # Java Script
 - [Introduction](#introduction)
 - [var let const](#var-let-const)
-
+- [Comparison operator](#comparison-operator)
 
 
 
@@ -80,7 +80,19 @@ What makes JavaScript unique?
 
 ```
     
-    
+ 
+ # Comparison operator
+
+```javascript
+
+ if (stopLight === 'green' && pedestrians === 0) {
+  console.log('Go!');
+} else {
+  console.log('Stop');
+}
+
+```
+
     
     
     
