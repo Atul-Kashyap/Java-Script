@@ -1,6 +1,6 @@
 # Java Script
 - [Introduction](#introduction)
-- [var, let, and const](#var,-let,-and-const)
+- [var let const](#var-let-const)
 
 
 
@@ -36,7 +36,7 @@ What makes JavaScript unique?
 
 
 
-# var, let, and const
+# var let const
 
     var declarations are globally scoped or function scoped while let and const are block scoped.
     
