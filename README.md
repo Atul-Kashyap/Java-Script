@@ -1,6 +1,6 @@
 # Java Script
--[Introduction](#introduction)
--[var, let, and const](#var, let, and const)
+- [Introduction](#introduction)
+- [var, let, and const](#var-,-let-,-and-const)
 
 
 
