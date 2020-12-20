@@ -46,3 +46,46 @@ What makes JavaScript unique?
     
     While var and let can be declared without being initialized, const must be initialized during declaration.
     
+    Variables that have not been initialized store the primitive data type undefined.
+    
+    In ES6, template literals use backticks ` and ${} to interpolate values into a string.
+    
+    
+```javascript
+
+     const myPet = 'armadillo';
+     console.log(`I own a pet ${myPet}.`);
+     // Output: I own a pet armadillo.
+     
+```
+    
+    
+    
+    
+    
+    The typeof keyword returns the data type (as a string) of a value.
+    
+    
+    
+```javascript
+    
+    const unknown1 = 'foo';
+    console.log(typeof unknown1); // Output: string
+ 
+    const unknown2 = 10;
+    console.log(typeof unknown2); // Output: number
+ 
+    const unknown3 = true; 
+    console.log(typeof unknown3); // Output: boolean
+
+```
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
