@@ -1,8 +1,9 @@
 # Java Script
 - [Introduction](#introduction)
 - [var let const](#var-let-const)
-- [Comparison operator](#comparison-operator)
-
+- [Comparison operator](#Comparison-operator)
+- [Truthy and Falsy](#Truthy-and-Falsy)
+- [Ternary Operator](#Ternary-Operator)
 
 
 
@@ -93,6 +94,89 @@ What makes JavaScript unique?
 
 ```
 
+
+
+# Truthy and Falsy
+
+So which values are falsy— or evaluate to false when checked as a condition? The list of falsy values includes:
+
+    0
+    
+    Empty strings like "" or ''
+    
+    null which represent when there is no value at all
+    
+    undefined which represent when a declared variable lacks a value
+    
+    NaN, or Not a Number
+ 
+```javascript
+
+let numberOfApples = 0;
+ 
+if (numberOfApples){
+   console.log('Let us eat apples!');
+} else {
+   console.log('No apples left!');
+}
+ 
+// Prints 'No apples left!'
+
+```
+
+Truthy and falsy evaluations open a world of short-hand possibilities!
+
+Say you have a website and want to take a user’s username to make a personalized greeting. Sometimes, the user does not have an account, making the username variable falsy. The code below checks if username is defined and assigns a default string if it is not:
+
+```javascript
+
+let defaultName;
+if (username) {
+  defaultName = username;
+} else {
+  defaultName = 'Stranger';
+}
+
+```
+
+If you combine your knowledge of logical operators you can use a short-hand for the code above. In a boolean condition, JavaScript assigns the truthy value to a variable if you use the || operator in your assignment:
+
+```javascript
+
+let defaultName = username || 'Stranger';
+
+```
+
+Because || or statements check the left-hand condition first, the variable defaultName will be assigned the actual value of username if is truthy, and it will be assigned the value of 'Stranger' if username is falsy. This concept is also referred to as **short-circuit evaluation**. 
+
+
+
+# Ternary Operator
+ 
+    In the spirit of using short-hand syntax, we can use a ternary operator to simplify an if...else statement.
+    
+    Comparison operators, including <, >, <=, >=, ===, and !== can compare two values.
+
+    Take a look at the if...else statement example:
+```javascript
+
+let isNightTime = true;
+ 
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+
+```
+    
+We can use a ternary operator to perform the same functionality:
+
+```javascript
+
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+```
     
     
     
