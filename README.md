@@ -4,8 +4,9 @@
 - [Comparison operator](#Comparison-operator)
 - [Truthy and Falsy](#Truthy-and-Falsy)
 - [Ternary Operator](#Ternary-Operator)
-
-
+- [Function and Hoisting](#Function-and-Hoisting)
+- [Scope](#Scope)
+- [Array](#Array)
 
 
 
@@ -179,7 +180,276 @@ isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lig
 ```
     
     
+ # Function and Hoisting
+ 
+ A function declaration consists of:
+
+    The function keyword.
     
+    The name of the function, or its identifier, followed by parentheses.
+    
+    A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, { }.
+    
+```javascript
+
+console.log(greetWorld()); // Output: Hello, World!
+ 
+function greetWorld() {
+  console.log('Hello, World!');
+}
+
+```
+
+**Hoisting**
+
+Hoisting is a term you will not find used in any normative specification prose prior to ECMAScript® 2015 Language Specification.
+
+One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:
+
+```javascript
+
+function catName(name) {
+  console.log("My cat's name is " + name);
+}
+
+catName("Tiger");
+
+/*
+The result of the code above is: "My cat's name is Tiger"
+*/
+
+```
+
+The above code snippet is how you would expect to write the code for it to work. Now, let's see what happens when we call the function before we write it:
+
+```javascript
+
+catName("Chloe");
+
+function catName(name) {
+  console.log("My cat's name is " + name);
+}
+/*
+The result of the code above is: "My cat's name is Chloe"
+*/
+
+```
+
+Even though we call the function in our code first, before the function is written, the code still works. This is because of how context execution works in JavaScript.
+
+Hoisting works well with other data types and variables. The variables can be initialized and used before they are declared.
+
+JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined.
+
+
+# Function Expressions
+
+Another way to define a function is to use a function expression. 
+
+To define a function inside an expression, we can use the function keyword.
+
+In a function expression, the function name is usually omitted. 
+
+A function with no name is called an anonymous function. 
+
+A function expression is often stored in a variable in order to refer to it.
+
+Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined. 
+
+To declare a function expression:
+
+    Declare a variable to make the variable’s name be the name, or identifier, of your function. Since the release of ES6, it is common practice to use const as the keyword to declare the variable.
+
+    Assign as that variable’s value an anonymous function created by using the function keyword followed by a set of parentheses with possible parameters. Then a set of curly braces that contain the function body.
+    
+```javascript
+
+const plantNeedsWater = function(day){
+  if(day === 'Wednesday')
+  return true;
+  else
+  return false;
+}
+console.log(plantNeedsWater('Tuesday'));
+
+```
+
+# Arrow Functions
+
+ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
+
+Arrow functions remove the need to type out the keyword function every time you need to create a function.
+
+Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { } like this:
+
+```javascript
+
+const rectangleArea = (width, height) => {
+  let area = width * height;
+  return area;
+};
+
+```
+
+
+# Concise Body Arrow Functions 
+
+JavaScript also provides several ways to refactor arrow function syntax. 
+
+The most condensed form of the function is known as concise body. We’ll explore a few of these techniques below:
+
+    Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes zero or multiple parameters, parentheses are      required.
+    
+```javascript
+    
+    ZERO PARAMETERS
+    cost fucntionName = () => {};
+
+    ONE PARAMETER
+    const functionName = paraOne => {};
+
+    TWO OR MORE PARAMETERS
+    const functionName = (paramOne, paramTwo) => {};
+    
+```
+
+
+    A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.
+    
+```javascript
+
+SINGLE-LINE BLOCK
+const sumNumbers = numsber => number + number;
+
+MULTI-LINE BLOCK
+const sumNumbers = number => {
+  const sum = number + number;
+  return sum;
+};
+
+```
+
+# Scope
+
+An important idea in programming is scope. 
+
+Scope defines where variables can be accessed or referenced.
+
+While some variables can be accessed from anywhere within a program, other variables may only be available in a specific context. 
+
+
+**Scope** is the idea in programming that some variables are accessible/inaccessible from other parts of the program.
+    
+**Blocks** are statements that exist within curly braces {}.
+    
+**Global scope** refers to the context within which variables are accessible to every part of the program.
+    
+**Global variables** are variables that exist within global scope.
+    
+**Block scope** refers to the context within which variables that are accessible only within the block they are defined.
+    
+**Local variables** are variables that exist within block scope.
+    
+**Global namespace** is the space in our code that contains globally scoped information.
+    
+**Scope pollution** is when too many variables exist in a namespace or variable names are reused.
+
+
+# Array
+
+Arrays are JavaScript’s way of making lists. Arrays can store any data types (including strings, numbers, and booleans). 
+
+Like lists, arrays are ordered, meaning each item has a numbered position. 
+
+Arrays in JavaScript are zero-indexed, meaning the positions start counting from 0 rather than 1. Therefore, the first item in an array will be at position 0. 
+
+You may recall that you can declare variables with both the let and const keywords. Variables declared with let can be reassigned.
+
+Variables declared with the const keyword cannot be reassigned. 
+
+However, elements in an array declared with const remain mutable. 
+
+Meaning that we can change the contents of a const array, but cannot reassign a new array or a different value. 
+
+One of an array’s built-in properties is length and it returns the number of items in the array. 
+
+We access the .length property just like we do with strings. Check the example below:
+
+```javascript
+
+const newYearsResolutions = ['Keep a journal', 'Take a falconry class'];
+ 
+console.log(newYearsResolutions.length);
+// Output: 2
+
+```
+
+We use dot notation, chaining a period with the property name to the array, to access the length property of the newYearsResolutions array. 
+
+One method, **.push()** allows us to add items to the end of an array. Here is an example of how this is used:
+
+```javascript
+
+const itemTracker = ['item 0', 'item 1', 'item 2'];
+ 
+itemTracker.push('item 3', 'item 4');
+ 
+console.log(itemTracker); 
+// Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4'];
+
+```
+
+Notice that .push() changes, or mutates, itemTracker. You might also see .push() referred to as a destructive array method since it changes the initial array.
+
+If you’re looking for a method that will mutate an array by adding elements to it, then .push() is the method for you! 
+
+Another array method, **.pop()**, removes the last item of an array. 
+
+```javascript
+
+const newItemTracker = ['item 0', 'item 1', 'item 2'];
+ 
+const removed = newItemTracker.pop();
+ 
+console.log(newItemTracker); 
+// Output: [ 'item 0', 'item 1' ]
+console.log(removed);
+// Output: item 2
+
+```
+
+**.pop()** returns the value of the last element. In the example, we store the returned value in a variable removed to be used for later.
+
+**.pop()** is a method that mutates the initial array.
+
+When you need to mutate an array by removing the last element, use **.pop()**. 
+
+Some arrays methods that are available to JavaScript developers include: **.join(), .slice(), .splice(), .shift(), .unshift(), and .concat()**.
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     
