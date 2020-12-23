@@ -57,7 +57,7 @@ What makes JavaScript unique?
 
      const myPet = 'armadillo';
      console.log(`I own a pet ${myPet}.`);
-     // Output: I own a pet armadillo.
+     // Output: I own a pet  armadillo.
      
 ```
     
