@@ -7,6 +7,7 @@
 - [Function and Hoisting](#Function-and-Hoisting)
 - [Scope](#Scope)
 - [Array](#Array)
+- [Functions as Data](#Functions-as-Data)
 
 
 
@@ -428,6 +429,45 @@ Some arrays methods that are available to JavaScript developers include: **.join
 
 
 
+
+# Functions as Data
+
+
+JavaScript functions behave like any other data type in the language; we can assign functions to variables, and we can reassign them to new variables.
+
+
+```javascript
+
+const announceThatIAmDoingImportantWork = () => {
+    console.log("I’m doing very important work!");
+};
+
+const busy = announceThatIAmDoingImportantWork;
+ 
+busy(); // This function call barely takes any space!
+
+
+```
+
+busy is a variable that holds a reference to our original function. 
+
+If we could look up the address in memory of busy and the address in memory of announceThatIAmDoingImportantWork they would point to the same place. 
+
+Our new busy() function can be invoked with parentheses as if that was the name we originally gave our function. 
+
+Since functions are a type of object, they have properties such as **.length** and .name** and methods such as **.toString()**.
+
+Since functions can behave like any other type of data in JavaScript, it might not surprise you to learn that we can also pass functions (into other functions) as parameters. 
+
+A higher-order function is a function that either accepts functions as parameters, returns a function, or both! 
+
+We call the functions that get passed in as parameters and invoked callback functions because they get called during the execution of the higher-order function.
+
+JavaScript functions are first-class objects, so they have properties and methods like any object
+
+Functions can be passed into other functions as parameters
+
+A higher-order function is a function that either accepts functions as parameters, returns a function, or both
 
 
 
