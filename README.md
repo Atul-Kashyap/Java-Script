@@ -716,8 +716,7 @@ console.log(summedNums); // Output: 117
  
 
  
-
-
+ - [Go Up](#java-script)
  
 
 
