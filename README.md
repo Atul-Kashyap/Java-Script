@@ -12,7 +12,8 @@
 - [The .forEach() Method](#The-forEach-Method)
 - [The .map() Method](#The-map-Method)
 - [The .filter() Method](#The-filter-Method)
-
+- [The .findIndex() Method](#The-findIndex-Method)
+- [The .reduce() Method](#The-reduce-Method)
 
 
 
@@ -635,9 +636,82 @@ The callback function is an arrow function has a single parameter, word. Each el
 word.length < 6; is the condition in the callback function. Any word from the words array that has fewer than 6 characters will be added to the shortWords array.
 
 
+# The .findIndex() Method
 
+We sometimes want to find the location of an element in an array. 
 
+That’s where the .findIndex() method comes in! Calling .findIndex() on an array will return the index of the first element that evaluates to true in the callback function. 
+
+```javascript
+
+const jumbledNums = [123, 25, 78, 5, 9]; 
+ 
+const lessThanTen = jumbledNums.findIndex(num => {
+  return num < 10;
+});
+
+```
+
+jumbledNums is an array that contains elements that are numbers.
+
+const lessThanTen = declares a new variable that stores the returned index number from invoking .findIndex().
+
+The callback function is an arrow function has a single parameter, num. 
+
+Each element in the jumbledNums array will be passed to this function as an argument.
+
+num < 10; is the condition that elements are checked against. .findIndex() will return the index of the first element which evaluates to true for that condition.
+
+# The .reduce() Method
+
+Another widely used iteration method is .reduce(). 
+
+The .reduce() method returns a single value after iterating through the elements of an array, thereby reducing the array. 
+
+Take a look at the example below:
+
+```javascript
+
+const numbers = [1, 2, 4, 10];
+ 
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+})
+ 
+console.log(summedNums) // Output: 17
+
+```
+
+Now let’s go over the use of .reduce() from the example above:
+
+    numbers is an array that contains numbers.
     
+    summedNums is a variable that stores the returned value of invoking .reduce() on numbers.
+    
+    numbers.reduce() calls the .reduce() method on the numbers array and takes in a callback function as argument.
+    
+    The callback function has two parameters, accumulator and currentValue. 
+    
+    The value of accumulator starts off as the value of the first element in the array and the currentValue starts as the second element. 
+    
+    To see the value of accumulator and currentValue change, review the chart above.
+    
+    As .reduce() iterates through the array, the return value of the callback function becomes the accumulator value for the next iteration, 
+    currentValue takes on the value of the current element in the looping process.
+
+The .reduce() method can also take an optional second parameter to set an initial value for accumulator (remember, the first argument is the callback function!). For instance: 
+
+ ```javascript
+
+const numbers = [1, 2, 4, 10];
+ 
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 100)  // <- Second argument for .reduce()
+ 
+console.log(summedNums); // Output: 117
+
+```   
 
  
 
