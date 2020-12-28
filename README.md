@@ -14,6 +14,7 @@
 - [The .filter() Method](#The-filter-Method)
 - [The .findIndex() Method](#The-findIndex-Method)
 - [The .reduce() Method](#The-reduce-Method)
+- [References](#References)
 
 
 
@@ -715,6 +716,12 @@ console.log(summedNums); // Output: 117
 
  
 
+ 
+ # References 
+ - [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods)
+ 
+ 
+ 
  
  - [Go Up](#java-script)
  
