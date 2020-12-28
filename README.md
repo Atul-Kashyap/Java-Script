@@ -9,8 +9,9 @@
 - [Array](#Array)
 - [Functions as Data](#Functions-as-Data)
 - [Introduction to Iterators](#Introduction-to-Iterators)
-- [The forEach() Method](#The-forEach()-Method)
-- [The map() Method](#The-map-Method)
+- [The .forEach() Method](#The-forEach-Method)
+- [The .map() Method](#The-map-Method)
+-[The .filter() Method](#The-filter-Method)
 
 
 
@@ -603,8 +604,41 @@ In the example above:
     
     return number * 10 is the code we wish to execute upon each element in the array. This will save each value from the numbers array, multiplied by 10, to a new array.
     
+    
+# The .filter() Method
 
+Like .map(), .filter() returns a new array. 
+
+However, .filter() returns an array of elements after filtering out certain elements from the original array. 
+
+The callback function for the .filter() method should return true or false depending on the element that is passed to it. 
  
+The elements that cause the callback function to return true are added to the new array. 
+
+Take a look at the following example:
+
+```javascript
+
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+ 
+const shortWords = words.filter(word => {
+  return word.length < 6;
+});
+
+```
+words is an array that contains string elements.
+
+const shortWords = declares a new variable that will store the returned array from invoking .filter().
+
+The callback function is an arrow function has a single parameter, word. Each element in the words array will be passed to this function as an argument.
+
+word.length < 6; is the condition in the callback function. Any word from the words array that has fewer than 6 characters will be added to the shortWords array.
+
+
+
+
+    
+
  
 
  
