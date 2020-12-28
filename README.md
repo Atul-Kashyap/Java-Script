@@ -11,7 +11,7 @@
 - [Introduction to Iterators](#Introduction-to-Iterators)
 - [The .forEach() Method](#The-forEach-Method)
 - [The .map() Method](#The-map-Method)
--[The .filter() Method](#The-filter-Method)
+- [The .filter() Method](#The-filter-Method)
 
 
 
