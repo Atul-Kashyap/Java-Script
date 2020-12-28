@@ -8,6 +8,7 @@
 - [Scope](#Scope)
 - [Array](#Array)
 - [Functions as Data](#Functions-as-Data)
+- [Introduction to Iterators](#Introduction-to-Iterators)
 
 
 
@@ -468,6 +469,21 @@ JavaScript functions are first-class objects, so they have properties and method
 Functions can be passed into other functions as parameters
 
 A higher-order function is a function that either accepts functions as parameters, returns a function, or both
+
+
+# Introduction to Iterators
+
+The built-in JavaScript array methods that help us iterate are called iteration methods, at times referred to as iterators. 
+
+Iterators are methods called on arrays to manipulate elements and return values.
+
+Notice the different methods being called on the arrays:
+
+    .forEach()
+    .map()
+    .filter()
+    
+ 
 
 
 
