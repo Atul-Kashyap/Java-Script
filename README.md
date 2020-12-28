@@ -9,8 +9,8 @@
 - [Array](#Array)
 - [Functions as Data](#Functions-as-Data)
 - [Introduction to Iterators](#Introduction-to-Iterators)
-- [The .forEach() Method](#The-.forEach()-Method)
-- [The .map() Method](#The-.map()-Method)
+- [The forEach() Method](#The-forEach()-Method)
+- [The map() Method](#The-map()-Method)
 
 
 
