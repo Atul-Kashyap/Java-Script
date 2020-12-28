@@ -10,6 +10,7 @@
 - [Functions as Data](#Functions-as-Data)
 - [Introduction to Iterators](#Introduction-to-Iterators)
 - [The .forEach() Method](#The-.forEach()-Method)
+- [The .map() Method](#The-.map()-Method)
 
 
 
@@ -571,7 +572,38 @@ All three code snippets do the same thing. In each array iteration method, we ca
 
 It’s good to be aware of the different ways to pass in callback functions as arguments in iterators because developers have different stylistic preferences. 
 
-Nonetheless, due to the strong adoption of ES6, we will be using arrow function syntax in the later exercises. 
+Nonetheless, due to the strong adoption of ES6, we will be using arrow function syntax in the later exercises. 4
+
+
+# The .map() Method
+
+When .map() is called on an array, it takes an argument of a callback function and returns a new array! 
+
+Take a look at an example of calling .map():
+
+```javascript
+
+const numbers = [1, 2, 3, 4, 5]; 
+ 
+const bigNumbers = numbers.map(number => {
+  return number * 10;
+});
+
+```
+
+map() works in a similar manner to .forEach()— the major difference is that .map() returns a new array.
+
+In the example above:
+
+    numbers is an array of numbers.
+    
+    bigNumbers will store the return value of calling .map() on numbers.
+    
+    numbers.map will iterate through each element in the numbers array and pass the element into the callback function.
+    
+    return number * 10 is the code we wish to execute upon each element in the array. This will save each value from the numbers array, multiplied by 10, to a new array.
+    
+
  
  
 
