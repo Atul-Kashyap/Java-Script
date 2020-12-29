@@ -14,6 +14,7 @@
 - [The .filter() Method](#The-filter-Method)
 - [The .findIndex() Method](#The-findIndex-Method)
 - [The .reduce() Method](#The-reduce-Method)
+- [Introduction to Objects](#Introduction-to-Objects)
 - [References](#References)
 
 
@@ -714,7 +715,60 @@ console.log(summedNums); // Output: 117
 
 ```   
 
+
+# Introduction to Objects
+
+There are only seven fundamental data types in JavaScript, and six of those are the primitive data types: 
+string, number, boolean, null, undefined, and symbol. 
+
+With the seventh type, objects, we open our code to more complex possibilities.
+
+Objects can be assigned to variables just like any JavaScript type. We use curly braces, {}, to designate an object literal:
+
+We fill an object with unordered data. This data is organized into key-value pairs. 
+
+A key is like a variable name that points to a location in memory that holds a value.
  
+A key’s value can be of any data type in the language including functions or other objects. 
+
+```javascript
+
+// An object literal with two key-value pairs
+let spaceship = {
+  'Fuel Type': 'diesel',
+  color: 'silver'
+};
+
+```
+The spaceship object has two properties Fuel Type and color. 'Fuel Type' has quotation marks because it contains a space character. 
+
+There are two ways we can access an object’s property. 
+
+Let’s explore the first way— dot notation, 
+
+```javascript
+
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver'
+};
+spaceship.homePlanet; // Returns 'Earth',
+spaceship.color; // Returns 'silver',
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
  # References 
