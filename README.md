@@ -40,7 +40,7 @@ What makes JavaScript unique?
     
     Simple things are done simply.
     
-    Support by all major browsers and enabled by default.
+    Support by all major browsers and enabled by defaults.
     
 
 
