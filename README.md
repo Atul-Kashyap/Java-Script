@@ -415,7 +415,6 @@ If you’re looking for a method that will mutate an array by adding elements to
 Another array method, **.pop()**, removes the last item of an array. 
 
 ```javascript
-
 const newItemTracker = ['item 0', 'item 1', 'item 2'];
  
 const removed = newItemTracker.pop();
