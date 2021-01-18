@@ -73,7 +73,6 @@ What makes JavaScript unique?
     
     
     
-    
     The typeof keyword returns the data type (as a string) of a value.
     
     
